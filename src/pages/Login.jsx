@@ -1,13 +1,13 @@
-// import { Helmet } from 'react-helmet';
 import { LoginForm } from 'components/LoginForm/LoginForm';
+// STYLES
+import { ChakraProvider } from '@chakra-ui/react';
 
 export default function Login() {
   return (
     <div>
-      {/* <Helmet> */}
-      <title>Login</title>
-      {/* </Helmet> */}
-      <LoginForm />
+      <ChakraProvider>
+        <LoginForm />
+      </ChakraProvider>
     </div>
   );
 }
