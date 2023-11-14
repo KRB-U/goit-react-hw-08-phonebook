@@ -55,7 +55,6 @@ export const LoginForm = () => {
             // rememberMe: false,
           }}
           onSubmit={values => {
-            console.log(values);
             dispatch(logIn(values));
           }}
         >

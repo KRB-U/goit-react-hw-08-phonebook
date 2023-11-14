@@ -1,13 +1,12 @@
-// import { Helmet } from 'react-helmet';
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+import { ChakraProvider } from '@chakra-ui/react';
 
 export default function Register() {
   return (
     <div>
-      {/* <Helmet> */}
-      <title>Registration</title>
-      {/* </Helmet> */}
-      <RegisterForm />
+      <ChakraProvider>
+        <RegisterForm />
+      </ChakraProvider>
     </div>
   );
 }
