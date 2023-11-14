@@ -18,9 +18,9 @@ const ContactList = () => {
   return (
     <div>
       <ul>
-        {filteredContacts.map(({ name, avatar, id }) => (
+        {filteredContacts.map(({ name, number, id }) => (
           <ContactItem key={id}>
-            {name}: {avatar}
+            {name}: {number}
             <Button type="submit" onClick={() => handleDeleteContact(id)}>
               Delete
             </Button>

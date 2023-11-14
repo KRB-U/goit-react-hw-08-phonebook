@@ -20,7 +20,7 @@ import {
 
 const ContactForm = () => {
   const [name, setName] = useState('');
-  const [avatar, setAvatar] = useState('');
+  const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
   const allContacts = useSelector(selectContacts);
@@ -30,7 +30,7 @@ const ContactForm = () => {
 
   const reset = () => {
     setName('');
-    setAvatar('');
+    setNumber('');
   };
 
   const handleChange = evt => {
@@ -40,8 +40,8 @@ const ContactForm = () => {
       case 'name':
         setName(value);
         break;
-      case 'avatar':
-        setAvatar(value);
+      case 'number':
+        setNumber(value);
         break;
 
       default:
@@ -61,7 +61,7 @@ const ContactForm = () => {
       return;
     }
 
-    dispatch(addContact({ name, avatar }));
+    dispatch(addContact({ name, number }));
     toast.success('Додано');
     reset();
   };
@@ -85,9 +85,9 @@ const ContactForm = () => {
           Number
           <InputPhone
             type="tel"
-            name="avatar"
+            name="number"
             required
-            value={avatar}
+            value={number}
             onChange={handleChange}
             id={formNumberUniqueKey}
           />
