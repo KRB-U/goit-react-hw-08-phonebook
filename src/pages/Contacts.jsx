@@ -38,8 +38,6 @@ export default function Contacts() {
 
   return (
     <>
-      {/* <TaskEditor /> */}
-
       <ContainerWrapper>
         <TitlePhonebook>Phonebook</TitlePhonebook>
         <ContactForm />
