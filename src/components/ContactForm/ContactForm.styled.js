@@ -34,7 +34,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
 
-  background-color: #1caf50;
+  background-color: #336699;
   cursor: pointer;
 
   width: fit-content;
@@ -43,7 +43,7 @@ const Button = styled.button`
   color: black;
 
   &:hover {
-    background-color: #113350;
+    background-color: #ffa07a;
     color: white;
   }
 `;

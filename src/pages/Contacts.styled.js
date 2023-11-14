@@ -5,7 +5,7 @@ export const ContainerWrapper = styled.div`
   width: 800px;
   border: 2px solid #337ab7;
   border-radius: 10px;
-  background-color: #c2eacf;
+  background-color: #dcedcf;
 `;
 
 export const TitlePhonebook = styled.h1`
