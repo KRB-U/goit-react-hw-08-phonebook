@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { addContact } from 'components/redux/operations';
-import { selectContacts } from 'components/redux/selectors';
+import { addContact } from 'components/redux/contcts/operations';
+import { selectContacts } from 'components/redux/contcts/selectors';
 
 // NOTIFY
 import toast from 'react-hot-toast';

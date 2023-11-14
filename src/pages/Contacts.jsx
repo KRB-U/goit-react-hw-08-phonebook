@@ -24,8 +24,11 @@ import { Toaster } from 'react-hot-toast';
 import { toastConfig } from 'components/toastConfig';
 
 //ACTIONS-MOVEMENT
-import { selectError, selectIsLoading } from 'components/redux/selectors';
-import { fetchContacts } from 'components/redux/operations';
+import {
+  selectError,
+  selectIsLoading,
+} from 'components/redux/contcts/selectors';
+import { fetchContacts } from 'components/redux/contcts/operations';
 
 export default function Contacts() {
   const dispatch = useDispatch();
