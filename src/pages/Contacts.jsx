@@ -41,9 +41,8 @@ export default function Contacts() {
         <Filter />
 
         {isLoading && !error && <LoaderDna />}
-        {error && <p>{error}</p>}
-
         <ContactList />
+        {error && <p>{error}</p>}
       </ContainerWrapper>
     </>
   );
