@@ -14,12 +14,10 @@ import {
   VStack,
 } from '@chakra-ui/react';
 
-import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
   // const handleSubmit = e => {
   //   e.preventDefault();
 
