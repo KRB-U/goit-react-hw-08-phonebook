@@ -12,6 +12,7 @@ import {
   Input,
   VStack,
 } from '@chakra-ui/react';
+import toast from 'react-hot-toast';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -57,7 +58,10 @@ export const RegisterForm = () => {
             password: '',
           }}
           onSubmit={values => {
-            dispatch(register(values));
+            dispatch(register(values))
+              .unwrap()
+              .then(() => {})
+              .catch(() => toast.error('такий юзер є'));
           }}
         >
           {({ handleSubmit, errors, touched }) => (

@@ -60,8 +60,8 @@ export const LoginForm = () => {
           onSubmit={values => {
             dispatch(logIn(values))
               .unwrap()
-              .then(() => navigate('/contacts'))
-              .catch(() => toast.error('UPS...'));
+              .then(() => {})
+              .catch(() => toast.error('такою юзера нема'));
           }}
         >
           {({ handleSubmit, errors, touched }) => (

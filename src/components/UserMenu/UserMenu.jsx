@@ -15,11 +15,11 @@ export const UserMenu = () => {
       <UserName>Welcome, {user.name}</UserName>
       <LogoutButton
         type="button"
-        onClick={() =>
-          dispatch(logOut())
-            .unwrap()
-            .then(() => navigate('/'))
-            .catch(() => toast.error('UPS...'))
+        onClick={
+          () => dispatch(logOut())
+          // .unwrap()
+          // .then(() => navigate('/'))
+          // .catch(() => toast.error('UPS...'))
         }
       >
         Logout
