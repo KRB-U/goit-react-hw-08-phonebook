@@ -1,6 +1,3 @@
-// ROUTES
-import { Route, Routes } from 'react-router-dom';
-
 // PAGES
 import Home from 'pages/Home';
 import Contacts from 'pages/Contacts';
@@ -21,6 +18,8 @@ import { fetchCurrentUser } from './redux/auth/operations';
 import { Toaster } from 'react-hot-toast';
 import { toastConfig } from 'components/toastConfig';
 
+// ROUTES
+import { Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
