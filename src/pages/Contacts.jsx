@@ -20,6 +20,7 @@ import {
   selectIsLoading,
 } from 'components/redux/contcts/selectors';
 import { fetchContacts } from 'components/redux/contcts/operations';
+import { LoaderDna } from 'Spiner/Spiner';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -39,8 +40,8 @@ export default function Contacts() {
         <TitleContacts>Contacts</TitleContacts>
         <Filter />
 
-        {isLoading && !error && <b>Request in progress...</b>}
-        {error && <p>{error}</p>}
+        {isLoading && !error && <LoaderDna />}
+        {/* {error && <p>{error}</p>} */}
 
         <ContactList />
       </ContainerWrapper>

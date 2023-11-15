@@ -5,7 +5,7 @@ import { Formik, Field } from 'formik';
 import {
   Box,
   Button,
-  // Checkbox,
+  Checkbox,
   Flex,
   FormControl,
   FormLabel,
@@ -55,7 +55,7 @@ export const LoginForm = () => {
           initialValues={{
             email: '',
             password: '',
-            // rememberMe: false,
+            rememberMe: false,
           }}
           onSubmit={values => {
             dispatch(logIn(values))
@@ -96,14 +96,14 @@ export const LoginForm = () => {
                   />
                   <FormErrorMessage>{errors.password}</FormErrorMessage>
                 </FormControl>
-                {/* <Field
+                <Field
                   as={Checkbox}
                   id="rememberMe"
                   name="rememberMe"
                   colorScheme="purple"
                 >
                   Remember me?
-                </Field> */}
+                </Field>
                 <Button type="submit" colorScheme="purple" width="full">
                   Login
                 </Button>
