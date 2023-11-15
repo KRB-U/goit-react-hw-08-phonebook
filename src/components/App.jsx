@@ -17,6 +17,10 @@ import { useDispatch } from 'react-redux';
 // OPERATIONS
 import { fetchCurrentUser } from './redux/auth/operations';
 
+// NOTIFY
+import { Toaster } from 'react-hot-toast';
+import { toastConfig } from 'components/toastConfig';
+
 const App = () => {
   const dispatch = useDispatch();
 
@@ -26,6 +30,7 @@ const App = () => {
 
   return (
     <div>
+      <Toaster {...toastConfig} />;
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

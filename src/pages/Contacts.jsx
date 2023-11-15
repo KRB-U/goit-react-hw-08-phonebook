@@ -14,10 +14,6 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 
-// NOTIFY
-import { Toaster } from 'react-hot-toast';
-import { toastConfig } from 'components/toastConfig';
-
 //ACTIONS-MOVEMENT
 import {
   selectError,
@@ -47,7 +43,6 @@ export default function Contacts() {
         {error && <p>{error}</p>}
 
         <ContactList />
-        <Toaster {...toastConfig} />
       </ContainerWrapper>
     </>
   );

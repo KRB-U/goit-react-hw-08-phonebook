@@ -14,9 +14,12 @@ import {
   VStack,
 } from '@chakra-ui/react';
 
+import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
+
 export const LoginForm = () => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   // const handleSubmit = e => {
   //   e.preventDefault();
 
@@ -55,7 +58,10 @@ export const LoginForm = () => {
             // rememberMe: false,
           }}
           onSubmit={values => {
-            dispatch(logIn(values));
+            dispatch(logIn(values))
+              .unwrap()
+              .then(() => navigate('/contacts'))
+              .catch(() => toast.error('UPS...'));
           }}
         >
           {({ handleSubmit, errors, touched }) => (
@@ -85,7 +91,6 @@ export const LoginForm = () => {
                       if (value.length < 6) {
                         error = 'Password must contain at least 6 characters';
                       }
-
                       return error;
                     }}
                   />
