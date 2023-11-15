@@ -8,6 +8,6 @@ export const PublicRoute = ({ children }) => {
   return !isAuth ? (
     children
   ) : (
-    <Navigate to={location.state ? location.state : '/'} />
+    <Navigate to={location.state ? location.state : '/contacts'} />
   );
 };
