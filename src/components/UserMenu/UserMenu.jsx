@@ -18,7 +18,10 @@ export const UserMenu = () => {
         onClick={() =>
           dispatch(logOut())
             .unwrap()
-            .then(() => toast.success('успішно'))
+            .then(() => {
+              toast.success('успішно');
+              navigate('/login');
+            })
             .catch(() => toast.error('UPS...'))
         }
       >
