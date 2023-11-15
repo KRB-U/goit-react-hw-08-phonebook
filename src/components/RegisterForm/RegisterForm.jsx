@@ -60,7 +60,9 @@ export const RegisterForm = () => {
           onSubmit={values => {
             dispatch(register(values))
               .unwrap()
-              .then(() => {})
+              .then(() => {
+                toast.success('успіх');
+              })
               .catch(() => toast.error('такий юзер є'));
           }}
         >

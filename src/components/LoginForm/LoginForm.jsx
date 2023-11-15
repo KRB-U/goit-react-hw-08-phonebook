@@ -60,7 +60,9 @@ export const LoginForm = () => {
           onSubmit={values => {
             dispatch(logIn(values))
               .unwrap()
-              .then(() => {})
+              .then(() => {
+                toast.success('успіх');
+              })
               .catch(() => toast.error('такою юзера нема'));
           }}
         >
