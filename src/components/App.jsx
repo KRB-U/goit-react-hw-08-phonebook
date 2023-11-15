@@ -1,14 +1,8 @@
-// PAGES
-import Home from 'pages/Home';
-import Contacts from 'pages/Contacts';
-import Login from 'pages/Login';
-import Register from 'pages/Register';
-
 // LAYOUT
 import { Layout } from './Layout';
 
 // HOOKS
-import { useEffect } from 'react';
+import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 // OPERATIONS
@@ -22,6 +16,12 @@ import { toastConfig } from 'components/toastConfig';
 import { Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
+
+// PAGES
+const Home = lazy(() => import('pages/Home'));
+const Contacts = lazy(() => import('pages/Contacts'));
+const Login = lazy(() => import('pages/Login'));
+const Register = lazy(() => import('pages/Register'));
 
 const App = () => {
   const dispatch = useDispatch();
