@@ -4,7 +4,7 @@ import { Title } from './Home.styled';
 export default function Home() {
   return (
     <Container>
-      <Title>Phone book</Title>
+      <Title>Phonebook</Title>
     </Container>
   );
 }

@@ -1,9 +1,13 @@
 import { Outlet } from 'react-router-dom';
-import { AppBar } from './AppBar/AppBar';
 import { Suspense } from 'react';
+import { useAuth } from './hooks';
 
 export const Layout = () => {
-  return (
+  const { isRefreshing } = useAuth();
+
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <div>
       <Suspense fallback={null}>
         <Outlet />
