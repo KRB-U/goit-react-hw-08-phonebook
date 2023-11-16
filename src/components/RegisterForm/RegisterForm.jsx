@@ -187,6 +187,7 @@ export default function RegisterForm() {
               type="name"
               id="name"
               autoComplete="current-name"
+              autoFocus
             />
             <TextField
               margin="normal"
@@ -196,7 +197,6 @@ export default function RegisterForm() {
               label="Email Address"
               name="email"
               autoComplete="email"
-              autoFocus
             />
             <TextField
               margin="normal"
