@@ -170,7 +170,7 @@ export default function RegisterForm() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Log in
+            Registration
           </Typography>
           <Box
             component="form"
@@ -215,7 +215,7 @@ export default function RegisterForm() {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Log In
+              Register
             </Button>
           </Box>
         </Box>
