@@ -141,6 +141,8 @@ export default function RegisterForm() {
   const handleSubmit = event => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    // console.dir(data);
+
     dispatch(
       register({
         name: data.get('name'),
@@ -183,7 +185,7 @@ export default function RegisterForm() {
               margin="normal"
               required
               fullWidth
-              name="ґ"
+              name="name"
               label="Name"
               type="name"
               id="name"
