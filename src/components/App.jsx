@@ -16,7 +16,7 @@ import { toastConfig } from 'components/toastConfig';
 import { Route, Routes } from 'react-router-dom';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
-import { AppBar } from './AppBar/AppBar';
+import { AppBarRename } from './AppBar/AppBar';
 
 // PAGES
 const Home = lazy(() => import('pages/Home'));
@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <div>
-      <AppBar />
+      <AppBarRename />
       <Toaster {...toastConfig} />;
       <Routes>
         <Route path="/" element={<Layout />}>
