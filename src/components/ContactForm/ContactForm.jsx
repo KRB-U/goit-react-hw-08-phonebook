@@ -4,9 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'components/redux/contcts/operations';
 import { selectContacts } from 'components/redux/contcts/selectors';
 
-//MUI
-import { Button } from '@mui/material';
-
 // NOTIFY
 import toast from 'react-hot-toast';
 
@@ -20,6 +17,15 @@ import {
   InputPhone,
   // Button,
 } from './ContactForm.styled';
+
+//MUI
+import {
+  Button,
+  TextField,
+  FormControl,
+  InputLabel,
+  Container,
+} from '@mui/material';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -70,11 +76,11 @@ const ContactForm = () => {
   };
 
   return (
-    <FormContainer>
+    <Container>
       <form onSubmit={handleSubmit}>
-        <LabelInputName htmlFor={formNameUniqueKey}>
-          Name
-          <InputName
+        <FormControl fullWidth sx={{ marginBottom: '1rem' }}>
+          {/* <InputLabel htmlFor={formNameUniqueKey}>Name</InputLabel> */}
+          <TextField
             type="text"
             name="name"
             required
@@ -82,11 +88,11 @@ const ContactForm = () => {
             onChange={handleChange}
             id={formNameUniqueKey}
           />
-        </LabelInputName>
+        </FormControl>
 
-        <LabelInputPhone htmlFor={formNumberUniqueKey}>
-          Number
-          <InputPhone
+        <FormControl fullWidth sx={{ marginBottom: '1rem' }}>
+          {/* <InputLabel htmlFor={formNumberUniqueKey}>Number</InputLabel> */}
+          <TextField
             type="tel"
             name="number"
             required
@@ -94,12 +100,13 @@ const ContactForm = () => {
             onChange={handleChange}
             id={formNumberUniqueKey}
           />
-        </LabelInputPhone>
+        </FormControl>
+
         <Button variant="contained" type="submit">
           Add contact
         </Button>
       </form>
-    </FormContainer>
+    </Container>
   );
 };
 
