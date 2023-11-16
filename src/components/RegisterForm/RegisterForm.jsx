@@ -143,7 +143,7 @@ export default function RegisterForm() {
     const data = new FormData(event.currentTarget);
     dispatch(
       register({
-        name: data.get('email'),
+        name: data.get('name'),
         email: data.get('email'),
         password: data.get('password'),
       })
@@ -183,7 +183,7 @@ export default function RegisterForm() {
               margin="normal"
               required
               fullWidth
-              name="name"
+              name="ґ"
               label="Name"
               type="name"
               id="name"
