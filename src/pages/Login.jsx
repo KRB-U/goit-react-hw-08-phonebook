@@ -1,4 +1,4 @@
-import SignIn, { LoginForm } from 'components/LoginForm/LoginForm';
+import SignIn from 'components/LoginForm/LoginForm';
 // STYLES
 // import { ChakraProvider } from '@chakra-ui/react';
 
