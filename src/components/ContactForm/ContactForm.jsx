@@ -9,22 +9,22 @@ import toast from 'react-hot-toast';
 
 import { nanoid } from 'nanoid';
 
-import {
-  FormContainer,
-  LabelInputName,
-  InputName,
-  LabelInputPhone,
-  InputPhone,
-  // Button,
-} from './ContactForm.styled';
+// import {
+//   FormContainer,
+//   LabelInputName,
+//   InputName,
+//   LabelInputPhone,
+//   InputPhone,
+//   // Button,
+// } from './ContactForm.styled';
 
 //MUI
 import {
   Button,
-  TextField,
   FormControl,
   InputLabel,
   Container,
+  Input,
 } from '@mui/material';
 
 const ContactForm = () => {
@@ -80,7 +80,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit}>
         <FormControl fullWidth sx={{ marginBottom: '1rem' }}>
           <InputLabel htmlFor={formNameUniqueKey}>Name</InputLabel>
-          <TextField
+          <Input
             type="text"
             name="name"
             required
@@ -92,7 +92,7 @@ const ContactForm = () => {
 
         <FormControl fullWidth sx={{ marginBottom: '1rem' }}>
           <InputLabel htmlFor={formNumberUniqueKey}>Number</InputLabel>
-          <TextField
+          <Input
             type="tel"
             name="number"
             required
