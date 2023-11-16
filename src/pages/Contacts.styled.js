@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const ContainerWrapper = styled.div`
+  margin-top: 20px;
   margin: 0 auto;
   width: 800px;
-  border: 2px solid #337ab7;
+  border: 2px solid #8dbdff;
   border-radius: 10px;
-  background-color: #dcedcf;
+  background-color: #f2f7ff;
 `;
 
 export const TitlePhonebook = styled.h1`
