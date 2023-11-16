@@ -167,7 +167,7 @@ export default function RegisterForm() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
             <PersonAddOutlined />
           </Avatar>
           <Typography component="h1" variant="h5">
