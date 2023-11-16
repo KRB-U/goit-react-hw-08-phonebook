@@ -1,12 +1,15 @@
-import { RegisterForm } from 'components/RegisterForm/RegisterForm';
-import { ChakraProvider } from '@chakra-ui/react';
+// import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+
+import RegisterForm from 'components/RegisterForm/RegisterForm';
+
+// import { ChakraProvider } from '@chakra-ui/react';
 
 export default function Register() {
   return (
     <div>
-      <ChakraProvider>
-        <RegisterForm />
-      </ChakraProvider>
+      {/* <ChakraProvider> */}
+      <RegisterForm />
+      {/* </ChakraProvider> */}
     </div>
   );
 }

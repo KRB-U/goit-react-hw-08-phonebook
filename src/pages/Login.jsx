@@ -1,13 +1,14 @@
-import { LoginForm } from 'components/LoginForm/LoginForm';
+import SignIn, { LoginForm } from 'components/LoginForm/LoginForm';
 // STYLES
-import { ChakraProvider } from '@chakra-ui/react';
+// import { ChakraProvider } from '@chakra-ui/react';
 
 export default function Login() {
   return (
     <div>
-      <ChakraProvider>
-        <LoginForm />
-      </ChakraProvider>
+      {/* <ChakraProvider> */}
+      {/* <LoginForm /> */}
+      <SignIn></SignIn>
+      {/* </ChakraProvider> */}
     </div>
   );
 }
