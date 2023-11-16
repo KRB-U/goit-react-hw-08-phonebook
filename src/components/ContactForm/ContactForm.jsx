@@ -79,7 +79,7 @@ const ContactForm = () => {
     <Container>
       <form onSubmit={handleSubmit}>
         <FormControl fullWidth sx={{ marginBottom: '1rem' }}>
-          {/* <InputLabel htmlFor={formNameUniqueKey}>Name</InputLabel> */}
+          <InputLabel htmlFor={formNameUniqueKey}>Name</InputLabel>
           <TextField
             type="text"
             name="name"
@@ -91,7 +91,7 @@ const ContactForm = () => {
         </FormControl>
 
         <FormControl fullWidth sx={{ marginBottom: '1rem' }}>
-          {/* <InputLabel htmlFor={formNumberUniqueKey}>Number</InputLabel> */}
+          <InputLabel htmlFor={formNumberUniqueKey}>Number</InputLabel>
           <TextField
             type="tel"
             name="number"
