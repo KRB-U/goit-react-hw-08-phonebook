@@ -2,7 +2,7 @@ import { AuthNav } from 'components/AuthNav/AuthNav';
 import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useAuth } from 'components/hooks/useAuth';
-import { Header } from './AppBar.styled';
+// import { Header } from './AppBar.styled';
 
 //
 import AppBar from '@mui/material/AppBar';
@@ -16,7 +16,7 @@ import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import RecentActorsRoundedIcon from '@mui/icons-material/RecentActorsRounded';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -53,7 +53,9 @@ export const AppBarRename = () => {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <RecentActorsRoundedIcon
+            sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+          />
           <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
             <Typography
               variant="h6"
@@ -104,7 +106,6 @@ export const AppBarRename = () => {
               {
                 <MenuItem onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    {' '}
                     <Navigation />
                     {isLoggedIn ? <UserMenu /> : <AuthNav />}
                   </Typography>
@@ -112,25 +113,28 @@ export const AppBarRename = () => {
               }
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO
-          </Typography>
+          <RecentActorsRoundedIcon
+            sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
+          />
+          <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Typography
+              variant="h5"
+              noWrap
+              component="a"
+              sx={{
+                mr: 2,
+                display: { xs: 'flex', md: 'none' },
+                flexGrow: 1,
+                fontFamily: 'monospace',
+                fontWeight: 700,
+                letterSpacing: '.3rem',
+                color: 'inherit',
+                textDecoration: 'none',
+              }}
+            >
+              PhoneBook
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* {
               <Button
