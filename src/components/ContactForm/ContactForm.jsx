@@ -4,6 +4,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'components/redux/contcts/operations';
 import { selectContacts } from 'components/redux/contcts/selectors';
 
+//MUI
+import { Button } from '@mui/material';
+
 // NOTIFY
 import toast from 'react-hot-toast';
 
@@ -15,7 +18,7 @@ import {
   InputName,
   LabelInputPhone,
   InputPhone,
-  Button,
+  // Button,
 } from './ContactForm.styled';
 
 const ContactForm = () => {
@@ -92,8 +95,9 @@ const ContactForm = () => {
             id={formNumberUniqueKey}
           />
         </LabelInputPhone>
-
-        <Button type="submit">Add contact</Button>
+        <Button variant="contained" type="submit">
+          Add contact
+        </Button>
       </form>
     </FormContainer>
   );

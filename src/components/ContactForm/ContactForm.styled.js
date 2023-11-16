@@ -30,7 +30,7 @@ const InputPhone = styled.input`
   margin-right: 20px;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   border: none;
   border-radius: 5px;
 
@@ -54,5 +54,4 @@ export {
   InputName,
   LabelInputPhone,
   InputPhone,
-  Button,
 };

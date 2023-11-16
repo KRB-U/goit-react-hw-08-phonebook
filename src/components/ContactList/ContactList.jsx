@@ -3,7 +3,12 @@ import { Button, ContactItem } from './ContactList.styled';
 
 import { deleteContact } from 'components/redux/contcts/operations';
 import { selectVisibleContacts } from 'components/redux/contcts/selectors';
+
 import toast from 'react-hot-toast';
+
+//MUI_ICON
+import { IconButton } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -21,9 +26,13 @@ const ContactList = () => {
         {filteredContacts.map(({ name, number, id }) => (
           <ContactItem key={id}>
             {name}: {number}
-            <Button type="submit" onClick={() => handleDeleteContact(id)}>
-              Delete
-            </Button>
+            <IconButton
+              aria-label="delete"
+              color="error"
+              onClick={() => handleDeleteContact(id)}
+            >
+              <DeleteIcon />
+            </IconButton>
           </ContactItem>
         ))}
       </ul>

@@ -7,7 +7,7 @@ export const LoaderDna = () => {
       height="80"
       width="80"
       ariaLabel="dna-loading"
-      wrapperStyle={{ margin: '0 auto', display: 'block' }}
+      wrapperStyle={{ margin: '0 auto', display: 'flex' }}
     />
   );
 };
