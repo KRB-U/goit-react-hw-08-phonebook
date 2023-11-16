@@ -34,7 +34,7 @@ const App = () => {
   return (
     <div>
       <AppBarRename />
-      <Toaster {...toastConfig} />;
+      <Toaster {...toastConfig} />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
