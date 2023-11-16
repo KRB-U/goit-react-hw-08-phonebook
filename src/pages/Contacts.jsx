@@ -39,7 +39,6 @@ export default function Contacts() {
         <ContactForm />
         <TitleContacts>Contacts</TitleContacts>
         <Filter />
-
         {isLoading && !error && <LoaderDna />}
         <ContactList />
         {error && <p>{error}</p>}
