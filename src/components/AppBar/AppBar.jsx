@@ -18,7 +18,6 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import RecentActorsRoundedIcon from '@mui/icons-material/RecentActorsRounded';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export const AppBarRename = () => {
   const { isLoggedIn } = useAuth();
