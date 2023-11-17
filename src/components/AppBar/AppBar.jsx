@@ -56,24 +56,24 @@ export const AppBarRename = () => {
           <RecentActorsRoundedIcon
             sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
           />
-          <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              sx={{
-                mr: 2,
-                display: { xs: 'none', md: 'flex' },
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              PhoneBook
-            </Typography>
-          </Link>
+          {/* <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}> */}
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            PhoneBook
+          </Typography>
+          {/* </Link> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -103,38 +103,35 @@ export const AppBarRename = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {
-                <MenuItem onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">
-                    <Navigation />
-                    {isLoggedIn ? <UserMenu /> : <AuthNav />}
-                  </Typography>
-                </MenuItem>
-              }
+              <Navigation />
+              {isLoggedIn ? <UserMenu /> : <AuthNav />}
+              {/* <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center"></Typography>
+              </MenuItem> */}
             </Menu>
           </Box>
           <RecentActorsRoundedIcon
             sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
           />
-          <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }}
-            >
-              PhoneBook
-            </Typography>
-          </Link>
+          {/* <Link to={'/'} style={{ textDecoration: 'none', color: 'inherit' }}> */}
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            PhoneBook
+          </Typography>
+          {/* </Link> */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {/* {
               <Button
@@ -166,13 +163,10 @@ export const AppBarRename = () => {
                   open={Boolean(anchorElUser)}
                   onClose={handleCloseUserMenu}
                 >
-                  {
-                    <MenuItem onClick={handleCloseUserMenu}>
-                      <Typography textAlign="center">
-                        <UserMenu />
-                      </Typography>
-                    </MenuItem>
-                  }
+                  <UserMenu />
+                  {/* <MenuItem onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center"></Typography>
+                  </MenuItem> */}
                 </Menu>
               </Box>
             ) : (
