@@ -103,11 +103,12 @@ export const AppBarRename = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <Navigation />
-              {isLoggedIn ? <UserMenu /> : <AuthNav />}
-              {/* <MenuItem onClick={handleCloseNavMenu}>
-                <Typography textAlign="center"></Typography>
-              </MenuItem> */}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">
+                  <Navigation />
+                  {isLoggedIn ? <UserMenu /> : <AuthNav />}
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
           <RecentActorsRoundedIcon
@@ -132,47 +133,48 @@ export const AppBarRename = () => {
             PhoneBook
           </Typography>
           {/* </Link> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {/* {
+          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}> */}
+          {/* {
               <Button
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               ></Button>
             } */}
-            <Navigation />
-            {isLoggedIn ? (
-              <Box sx={{ flexGrow: 0 }}>
-                <Tooltip title="Open settings">
-                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                    <Avatar alt="Avatar" src="" />
-                  </IconButton>
-                </Tooltip>
-                <Menu
-                  sx={{ mt: '45px' }}
-                  id="menu-appbar"
-                  anchorEl={anchorElUser}
-                  anchorOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'right',
-                  }}
-                  open={Boolean(anchorElUser)}
-                  onClose={handleCloseUserMenu}
-                >
+          <Navigation />
+          {isLoggedIn ? (
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar alt="Avatar" src="" />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: '45px' }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                <MenuItem onClick={handleCloseUserMenu}>
+                  {/* <Typography textAlign="center"> */}
                   <UserMenu />
-                  {/* <MenuItem onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center"></Typography>
-                  </MenuItem> */}
-                </Menu>
-              </Box>
-            ) : (
-              <AuthNav />
-            )}
-          </Box>
+                  {/* </Typography> */}
+                </MenuItem>
+              </Menu>
+            </Box>
+          ) : (
+            <AuthNav />
+          )}
+          {/* </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
