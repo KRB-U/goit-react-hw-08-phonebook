@@ -101,11 +101,17 @@ export const AppBarRename = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuItem onClick={handleCloseNavMenu}>
-                {/* <Typography textAlign="center"> */}
-                {isLoggedIn ? <UserMenu /> : <AuthNav />}
-                {/* </Typography> */}
-              </MenuItem>
+              {/* <Typography textAlign="center"> */}
+              {isLoggedIn ? (
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <UserMenu />
+                </MenuItem>
+              ) : (
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <AuthNav />
+                </MenuItem>
+              )}
+              {/* </Typography> */}
             </Menu>
             <Navigation />
           </Box>

@@ -16,7 +16,7 @@ code {
     monospace;
 }
 
-/* h1,
+h1,
 h2,
 h3,
 h4,
@@ -48,6 +48,6 @@ td {
   padding: 0;
   list-style-type: none;
   border-spacing: 0;
-} */
+}
 
 `;
