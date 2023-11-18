@@ -101,13 +101,13 @@ export const AppBarRename = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {/* <MenuItem onClick={handleCloseNavMenu}> */}
-              {/* <Typography textAlign="center"> */}
-              <Navigation />
-              {isLoggedIn ? <UserMenu /> : <AuthNav />}
-              {/* </Typography> */}
-              {/* </MenuItem> */}
+              <MenuItem onClick={handleCloseNavMenu}>
+                {/* <Typography textAlign="center"> */}
+                {isLoggedIn ? <UserMenu /> : <AuthNav />}
+                {/* </Typography> */}
+              </MenuItem>
             </Menu>
+            <Navigation />
           </Box>
           <RecentActorsRoundedIcon
             sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
@@ -130,7 +130,16 @@ export const AppBarRename = () => {
             PhoneBook
           </Typography>
           {/* </Link> */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: {
+                xs: 'none',
+                md: 'flex',
+                justifyContent: 'space-between',
+              },
+            }}
+          >
             {/* {
               <Button
                 onClick={handleCloseNavMenu}
